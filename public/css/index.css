@@ -1,0 +1,23 @@
+body{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+.navbar{
+    background-color: rgba(0, 0, 0, 0.699);
+}
+
+.pCss{
+    overflow: hidden;
+    max-width: 300ch;
+    max-height: 19ch;
+}
+
+/* footer */
+#sticky-footer {
+    flex-shrink: none;
+    margin-bottom: 0;
+  }

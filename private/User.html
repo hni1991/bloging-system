@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MyBlog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel=“stylesheet” href=“https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css“>   -->
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/User.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"crossorigin="anonymous">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/User.js"></script>
+</head>
+<body>
+  <div id="editor" class="editor">
+     
+  </div>
+
+  <div id="editorP" class="editor">
+    <div class="card col-6 center ">
+        <span class="Btn" onclick="closeE()"><i class="fa fa-pencil" aria-hidden="true"></i>
+        </span>
+        <input type="text" value="My Name">
+        <br>
+        <input type="input" value="my phone number">
+        <br>
+        <input type="file" placeholder="New Photo">
+        <br>
+        <input type="input" value="Blog Name">
+
+      </div>
+</div>
+   <!-- Start Navbar -->
+   <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+      <a class="navbar-brand" href="index.html">Logo</a>
+      <a class="navbar-brand btn btn-outline-warning btn-lg" href="/User.html">Your Account</a>
+      <ul class="navbar-nav mr-auto">
+          
+        </ul>
+          <ul class="navbar-nav">
+          <li class="nav-item">
+              <a class="nav-link btn btn-outline-success btn-lg" href="/logout">Logout</a>
+          </li>
+      </ul>
+  </nav>
+  <!-- Finish Navbar -->
+<div class="container">
+  
+
+        <div class="header">
+                <h2  class="" id="blogname"></h2>
+              </div>
+              <div class="userBtn"><br>
+                  <button onclick="showform()" id="newPostbtn" type="button" class="btn btn-outline-success btn-lg">Add new Post</button>
+                  </div>
+<!-- Start Hidden form add new post -->
+<form action="myblog.html" class="d-none" method="POST" enctype="multipart/form-data" id="hideForm">
+                      <div class="form-group">
+                        <label for="exampleFormControlInput1">Title</label>
+                        <input type="text" class="form-control" id="formtitlr" name="newTitle" >
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleFormControlInput1">Description</label>
+                        <input type="text" class="form-control" id="formdescription" name="newDescription" >
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleFormControlSelect1">Content</label>
+                        <textarea type="text" class="form-control" name="newContent" id="formcontent" rows="4"></textarea>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleFormControlSelect2">Choose a category</label>
+                        <select class="form-control" id="formcateg" name="newCategory">
+                            
+                        </select>
+                      </div>
+                      <div class="form-group">
+                          <label for="exampleFormControlFile1">Image</label>
+                          <input name="newImage" type="file" class="form-control-file" id="formfile">
+                        </div>
+                            <button type="submit" onclick="sendBlogform()" id="sendNewpostbtn" type="button" class="btn btn-outline-info btn-lg">Send blog</button>
+                            <button onclick="cancelnew()" id="sendNewpostbtn" type="button" class="btn btn-outline-warning btn-lg">Cancel</button>
+                    </form>
+<!-- Finish Hidden form add new post -->
+
+              <div class="row">
+                <div class="leftcolumn" id="postShow">
+                 
+                </div>
+                <div class="rightcolumn" id="userInform">
+                  
+                </div>
+              </div>
+            </div>
+
+
+              <div class="footer">
+                <h2>Footer</h2>
+              </div>
+</body>
+</html>

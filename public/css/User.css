@@ -1,0 +1,142 @@
+/* start Blog Page */
+* {
+    box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+    font-family: Arial;
+    /* padding: 20px; */
+    /* background: -webkit-linear-gradient(left, #3931af, #00c6ff); */
+}
+
+/* Header/Blog Title */
+.header {
+    padding: 30px;
+    font-size: 40px;
+    text-align: center;
+    background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+    float: left;
+    width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+    /* background-color: #aaa; */
+    max-width: 30%;
+    max-height:30% ;
+    padding: 10px;
+}
+.fakeimg img{
+max-width: 100%;
+max-height:80%;
+}
+.fakeimg2 img{
+    max-width: 70%;
+    max-height:70%;  
+}
+
+/* Add a card effect for articles */
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+
+    .leftcolumn,
+    .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+.fa {
+    font-size: 25px;
+    margin-left: 2px;
+}
+#doneBtn{
+    margin-top: 2px;
+    color: green;
+    
+}
+#trashBtn{
+    color: rgb(236, 58, 58);
+}
+#uploadBtn{
+    color: rgb(24, 124, 24);
+}
+.Btn{
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(128, 128, 128, 0.247);
+    border-radius: 50%;
+    /* box-shadow: -2px 2px rgba(0, 0, 0, 0.144); */
+    padding: 8px;
+}
+.Btn1{
+    position: absolute;
+    bottom: -20px;
+    right: 70px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(128, 128, 128, 0.247);
+    border-radius: 50%;
+    padding: 5px;
+}
+.Btn2{
+    position: absolute;
+    bottom: -20px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(128, 128, 128, 0.247);
+    padding: 7px;
+}
+.editor{
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100vw ;
+    height: 100vw;
+    background-color: rgba(0, 0, 0, 0.425);
+    z-index:2000 !important ;
+}
+.center{
+    margin-top: 10%;
+    margin-left: 25%;
+}
+/* Finish Blog Page */

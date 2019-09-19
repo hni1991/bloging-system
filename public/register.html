@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Register/Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/register.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    crossorigin="anonymous">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+   <script src='js/address.js'></script>
+
+    <script src="js/register.js"></script>
+        
+</head>
+<body>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+                <a class="navbar-brand" href="index.html">Logo</a>
+                <ul class="navbar-nav mr-auto">
+                    
+                  </ul>
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-success btn-lg" href="register.html">Get start</a>
+                    </li>
+                </ul>
+            </nav>
+  <!-- start register Form -->
+  <div class="main">
+  <div class="container register">
+
+        <div class="row">
+            <div class="col-md-3 col-sm-3 register-left">
+                <img src="gnome-blog.png" alt=""/>
+                <h3>Welcome</h3>
+                <p>Welcome to our website, where words matter.</p>
+            </div>
+            <div class="col-md-9 col-sm-9 register-right">
+                <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Register</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <!-- START LOGIN -->
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <h3 class="register-heading">Read to your mind’s desire.</h3>
+                        <p id="messageBox1" class=" hidden " ></p>
+
+                        <form name="loginForm" id="LF" method="POST">
+                        <div class="row register-form">
+                            <div class="col-md-6">
+                                  <div class="form-group">
+                                          <input type="email" class="form-control" name="email" placeholder="Email *" value="" required />
+                                      </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="password" class="form-control" name="password" placeholder="Password *" value="" required />
+                                </div>
+                                <a href="#" onclick="showForgetform()" id="" >Forget your password ?</a>
+                             
+                                <input type="button" id="logBtn" class="btnRegister" value="Login"/>
+                            </div>
+                        </div>
+                      </form>
+                         <!-- Finish Login -->
+                      <!-- Start update password -->
+                      <form name="forgetForm" class="forgetForm d-none" method="POST">
+                        <div class="row register-form">
+                            <div class="col-md-6">
+                                  <div class="form-group">
+                                          <input type="email" class="form-control" name="email" placeholder="Email *" value="" required />
+                                      </div>
+                            </div>
+                           <div class="col-md-6">
+                                <input class="btn btn-dark" type="button" id="forgetBtn" class="btnRegister" value="Submit"/>
+                            </div>
+                            
+                        </div>
+                      </form>
+                    </div>
+                    <!-- END LOGIN -->
+      
+                    <!-- START REGISTER -->
+                    <div class="tab-pane fade  show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <h3  class="register-heading">Read to your mind’s desire.</h3>
+                      
+                          <p id="messageBox" class=" hidden redA" ></p>
+                          <!-- action="/register" -->
+                        <form  name="registerform" id="regForm"  method="POST">
+                        <div class="row register-form">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="firstName" placeholder="First Name *" value="" required/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="lastName" placeholder="Last Name *" value="" required/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" name="email" placeholder="Email *" value="" required/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" maxlength="10" minlength="10" name="phone" class="form-control" placeholder="Phone *" value="" required/>
+                                </div>
+                                <div class="form-group">
+                                  <div class="maxl">
+                                      <label class="radio inline"> 
+                                          <input type="radio" name="gender" value="male" checked>
+                                          <span> Male </span> 
+                                      </label>
+                                      <label class="radio inline"> 
+                                          <input type="radio" name="gender" value="female">
+                                          <span>Female </span> 
+                                      </label>
+                                  </div>
+                              </div>
+      
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="password" id="pass" class="form-control" name="password" placeholder="Password *" value=""required />
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" id="passR"  class="form-control" placeholder="Confirm Password *" value=""required />
+                                </div>
+                              
+                                <div class="form-group">
+                                    <select name="secQuest" class="form-control">
+                                        <option class="hidden"  selected disabled>Please select your Security Question</option>
+                                        <option value="1">What is your Birthdate?</option>
+                                        <option value="2">What is Your old Phone Number</option>
+                                        <option value="3">What is your Pet Name?</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="secAnwser" placeholder="Answer *" value="" />
+                                </div>
+                                    <div id="html_element"></div>
+                                    
+                                <input type="button"  id="regBtn" class="btnRegister"  value="Register"/>
+                            </div>
+
+                            <!-- -->
+                        </div>
+                       
+                      </form>
+                    </div>
+                    <!-- END REGISTER -->
+                </div>
+              
+            </div>
+        </div>
+      </div>
+                    <!-- END REGISTER FORM-->
+                </div>
+<!-- start FOOTER -->
+<footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+        <div class="container text-center">
+          <small>Copyright &copy; Your Website</small>
+        </div>
+      </footer>
+      <!-- Finish FOOTER -->
+
+      <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer>
+    </script>
+</body>
+
+</html>
